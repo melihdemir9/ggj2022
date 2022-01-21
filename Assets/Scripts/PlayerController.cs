@@ -23,9 +23,11 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float cosrot = Mathf.Cos(mainCamera.transform.rotation.eulerAngles.y * Mathf.Deg2Rad);
         float sinrot = Mathf.Sin(mainCamera.transform.rotation.eulerAngles.y * Mathf.Deg2Rad);
-        Debug.Log("sin " + sinrot + "  cos " + cosrot);
         
         _rb.velocity = new Vector3((vertical * sinrot + horizontal * cosrot) * Speed, 0, (vertical * cosrot - horizontal * sinrot) * Speed);
         if(Mathf.Abs(horizontal) + Mathf.Abs(vertical) > 0.01f) transform.rotation = Quaternion.LookRotation(_rb.velocity);
+
+        if (Input.GetKeyDown(KeyCode.KeypadPlus)) Speed++;
+        if (Input.GetKeyDown(KeyCode.KeypadMinus)) Speed--;
     }
 }
