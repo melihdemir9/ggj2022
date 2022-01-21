@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 47352ca2d4c8c434eb4fdfe9e4792181, type: 2}
 --- !u!1001 &223369851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,33 +623,6 @@ Transform:
   m_Father: {fileID: 2093076746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &741174088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6486856855871611722, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
-  m_PrefabInstance: {fileID: 6252289448833903658}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &741174089
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741174088}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &941620512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6636504216121611201, guid: 37c97cf25ec0c53408ead1f044b25399, type: 3}
@@ -1099,6 +1072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093076746}
   - component: {fileID: 2093076745}
+  - component: {fileID: 2093076747}
   m_Layer: 0
   m_Name: ThirdPerson
   m_TagString: Untagged
@@ -1168,7 +1142,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 1000
+    m_MaxSpeed: 800
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -1224,6 +1198,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093076747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093076744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!4 &543450652631782874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5858656851016071664, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
@@ -1293,14 +1297,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4481689091707856887, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 4481689091707856887, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5858656851016071664, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
       propertyPath: m_RootOrder
       value: 2
