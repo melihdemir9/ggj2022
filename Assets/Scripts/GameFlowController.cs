@@ -15,6 +15,8 @@ public class GameFlowController : MonoBehaviour
     //temp
     [SerializeField] private Transform canvas;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private Camera _sceneCamera;
+    [SerializeField] private Light _lightSource;
 
     [HideInInspector] public int KeyProgress = 0;
     [HideInInspector] public bool NightMode;
@@ -90,6 +92,9 @@ public class GameFlowController : MonoBehaviour
         AudioManager.Instance.StopLoop();
         AudioManager.Instance.LoopSound("dayAmbience", 0.3f);
         
+        _sceneCamera.clearFlags = CameraClearFlags.Skybox;
+        _lightSource.intensity = 1.22f;
+        
         foreach (var enemy in _enemies)
         {
             enemy.gameObject.SetActive(false);
@@ -116,6 +121,9 @@ public class GameFlowController : MonoBehaviour
     {
         AudioManager.Instance.StopLoop();
         AudioManager.Instance.LoopSound("nightAmbience");
+
+        _sceneCamera.clearFlags = CameraClearFlags.SolidColor;
+        _lightSource.intensity = 0.2f;
         
         bool[] spawnedEnemyHere = new bool[_enemyLocations.Count];
         foreach (var enemy in _enemies)
