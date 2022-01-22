@@ -433,7 +433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A game by Eren Nal\xE7ac\u0131"
+  m_text: A game bye
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 299072196a8ef3740900b9a1dc4f0d06, type: 2}
   m_sharedMaterial: {fileID: 3939417416582977798, guid: 299072196a8ef3740900b9a1dc4f0d06, type: 2}
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 87.85
+  m_fontSize: 154.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1442,7 +1442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Very Scary Nightmare Game
+  m_text: Keep Your Eyes Open
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 299072196a8ef3740900b9a1dc4f0d06, type: 2}
   m_sharedMaterial: {fileID: 3939417416582977798, guid: 299072196a8ef3740900b9a1dc4f0d06, type: 2}
