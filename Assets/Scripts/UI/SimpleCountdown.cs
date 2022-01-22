@@ -32,7 +32,7 @@ public class SimpleCountdown : MonoBehaviour
             if (_timeLeft < 0)
             {
                 _timerOn = false;
-                Init(10);
+                GameFlowController.Instance.Switch();
             }
         }
     }

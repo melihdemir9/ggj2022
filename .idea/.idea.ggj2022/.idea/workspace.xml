@@ -24,7 +24,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/New Folder/StartMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" root0="FORCE_HIGHLIGHTING" />
@@ -33,13 +32,14 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCountdown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/GameOverScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/StartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/GameOverScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2419ISXAKUFEHN8ihEoIstNBcRW" />
@@ -84,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642787149527</updated>
-      <workItem from="1642787157378" duration="14555000" />
+      <workItem from="1642787157378" duration="18184000" />
     </task>
     <servers />
   </component>
