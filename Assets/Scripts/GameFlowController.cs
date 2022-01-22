@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -129,23 +130,18 @@ public class GameFlowController : MonoBehaviour
         _lightSource.intensity = 0.2f;
         _postProcessVolume.profile.GetSetting<Vignette>().color.value = Color.red;
 
-        
-        bool[] spawnedEnemyHere = new bool[_enemyLocations.Count];
-        foreach (var enemy in _enemies)
+        int enemyIndex = 0;
+        foreach (var enemyLocation in _enemyLocations.OrderBy(loc => Vector3.Distance(loc, _player.position)))
         {
-            int currentFarthestIndex = 0;
-            float currentLongestDistance = 0f;
-            for (int i = 0; i < _enemyLocations.Count; ++i)
+            if (enemyIndex >= _enemies.Count)
             {
-                if (currentLongestDistance >= Vector3.Distance(_player.position, _enemyLocations[i]) ||
-                    spawnedEnemyHere[i]) continue;
-                currentFarthestIndex = i;
-                currentLongestDistance = Vector3.Distance(_player.position, _enemyLocations[i]);
+                _enemies[0].transform.position = enemyLocation;
+                _enemies[0].gameObject.SetActive(true);
+                break;
             }
-
-            enemy.transform.position = _enemyLocations[currentFarthestIndex];
-            enemy.gameObject.SetActive(true);
-            spawnedEnemyHere[currentFarthestIndex] = true;
+            _enemies[enemyIndex].transform.position = enemyLocation;
+            _enemies[enemyIndex].gameObject.SetActive(true);
+            enemyIndex++;
         }
         
         foreach (var key in _collectibleKeys)
