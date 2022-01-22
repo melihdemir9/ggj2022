@@ -23,8 +23,9 @@ public class GameFlowController : MonoBehaviour
     [HideInInspector] public bool NightMode;
     private List<GameObject> _collectibleTimes = new List<GameObject>();
     private GameObject _collectibleKey;
-    
+
     public static GameFlowController Instance;
+    public bool IsReady = false;
     private void Awake()
     {
         Instance = this;
@@ -32,11 +33,13 @@ public class GameFlowController : MonoBehaviour
     
     void Start()
     {
+        AudioManager.Instance.LoopSound("dayAmbience");
         TotalKeyCount = _keyLocations.Count;
         //starts as day
         NightMode = false;
         _collectibleKey = Instantiate(_collectibleKeyPrefab, _keyLocations[KeyProgress], Quaternion.identity, _collectibleParent);
         SwitchToDay();
+        IsReady = true;
     }
 
     public void AddTime(int timeToAdd)

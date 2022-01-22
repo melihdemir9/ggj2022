@@ -13,9 +13,11 @@ public class EnemyController : MonoBehaviour
     
     private NavMeshAgent _agent;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+
+        yield return new WaitUntil(() => GameFlowController.Instance.IsReady);
     }
 
     // Update is called once per frame

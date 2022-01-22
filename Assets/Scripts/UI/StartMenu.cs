@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class StartMenu : MonoBehaviour
     private bool _sfxOn, _musicOn;
 
     
-    private void Awake()
+    private IEnumerator Start()
     {
         _sfxOn = PlayerPrefs.GetInt("sfxOn", 1) == 1;
         _musicOn = PlayerPrefs.GetInt("musicOn", 1) == 1;
@@ -25,6 +26,12 @@ public class StartMenu : MonoBehaviour
         _startButton.onClick.AddListener(OnStartButtonClicked);
         _sfxButton.onClick.AddListener(OnSfxButtonClicked);
         _musicButton.onClick.AddListener(OnMusicButtonClicked);
+
+        yield return new WaitUntil(() => AudioManager.Instance.IsReady);
+        
+        AudioManager.Instance.LoopSound("nightAmbience");
+
+        yield return null;
     }
 
     private void OnSfxButtonClicked()
@@ -43,6 +50,7 @@ public class StartMenu : MonoBehaviour
     
     private void OnStartButtonClicked()
     {
+        AudioManager.Instance.StopLoop();
         SceneManager.LoadScene("Scenes/MainScene");
     }
 }
