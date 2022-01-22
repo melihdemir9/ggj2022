@@ -23,7 +23,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,14 +33,18 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCountdown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/GameOverScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/StartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/GameOverScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/KeyMarker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMarker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
     </changedPaths>
   </component>
@@ -49,6 +55,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34965035" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -65,10 +73,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="42344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="42344" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -103,5 +111,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Bitbucket\ggj2022\Assets\Scripts\CollectibleKey.cs" initialLine="23" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="401" />
+            </startOffsets>
+            <endOffsets>
+              <option value="487" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs</url>
+          <line>174</line>
+          <properties documentPath="C:\Bitbucket\ggj2022\Assets\Scripts\GameFlowController.cs" initialLine="127" containingFunctionPresentation="method 'GetProximityVolumeForKey'">
+            <startOffsets>
+              <option value="5232" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5233" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -21,14 +21,14 @@ public class CollectibleKey : MonoBehaviour
 
     private void Update()
     {
-        _as.volume = GameFlowController.Instance.GetProximityVolumeForKey();
+        _as.volume = GameFlowController.Instance.GetProximityVolumeForKey(transform.position);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            GameFlowController.Instance.IterateKey();
+            GameFlowController.Instance.IterateKey(gameObject);
         }
     }
 }

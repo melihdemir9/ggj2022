@@ -8,34 +8,76 @@ public class GameFlowController : MonoBehaviour
     [SerializeField] private List<EnemyController> _enemies;
     [SerializeField] private GameObject _collectibleKeyPrefab;
     [SerializeField] private GameObject _collectibleTimePrefab;
-    [SerializeField] private List<Vector3> _enemyLocations;
-    [SerializeField] private List<Vector3> _keyLocations;
-    [SerializeField] private List<Vector3> _timeLocations;
     [SerializeField] private Transform _collectibleParent;
     [SerializeField] private Transform _player;
-    
+    public int TotalKeyCount;
+
     //temp
     [SerializeField] private Transform canvas;
     [SerializeField] private GameObject gameOverScreen;
 
     [HideInInspector] public int KeyProgress = 0;
-    [HideInInspector] public int TotalKeyCount;
     [HideInInspector] public bool NightMode;
+    
+    private List<Vector3> _enemyLocations = new List<Vector3>();
+    private List<Vector3> _possibleKeyLocations = new List<Vector3>();
+    private List<GameObject> _collectibleKeys = new List<GameObject>();
+    private List<Vector3> _timeLocations = new List<Vector3>();
     private List<GameObject> _collectibleTimes = new List<GameObject>();
-    private GameObject _collectibleKey;
     public float MaxDistance;
 
     public static GameFlowController Instance;
-    public bool IsReady = false;
+    [HideInInspector]public bool IsReady = false;
     private void Awake()
     {
         Instance = this;
-        TotalKeyCount = _keyLocations.Count;
+
+        ProcessEnemyMarkers();
+        ProcessKeyMarkers();
+        ProcessTimeMarkers();
+        
         //starts as day
         NightMode = false;
-        _collectibleKey = Instantiate(_collectibleKeyPrefab, _keyLocations[KeyProgress], Quaternion.identity, _collectibleParent);
         SwitchToDay();
+        
         IsReady = true;
+    }
+
+    private void ProcessEnemyMarkers()
+    {
+        EnemyMarker[] markers = FindObjectsOfType<EnemyMarker>();
+        foreach (var enemyMarker in markers)
+        {
+            _enemyLocations.Add(enemyMarker.transform.position);
+            Destroy(enemyMarker);
+        }
+    }
+
+    private void ProcessKeyMarkers()
+    {
+        KeyMarker[] markers = FindObjectsOfType<KeyMarker>();
+        foreach (var keyMarker in markers)
+        {
+            _possibleKeyLocations.Add(keyMarker.transform.position);
+            Destroy(keyMarker);
+        }
+
+        for (int i = 0; i < TotalKeyCount; ++i)
+        {
+            int randIndex = Random.Range(0, _possibleKeyLocations.Count);
+            _collectibleKeys.Add(Instantiate(_collectibleKeyPrefab, _possibleKeyLocations[randIndex], Quaternion.identity, _collectibleParent));
+            _possibleKeyLocations.RemoveAt(randIndex);
+        }
+    }
+    
+    private void ProcessTimeMarkers()
+    {
+        TimeMarker[] markers = FindObjectsOfType<TimeMarker>();
+        foreach (var timeMarker in markers)
+        {
+            _timeLocations.Add(timeMarker.transform.position);
+            Destroy(timeMarker);
+        }
     }
 
     public void AddTime(int timeToAdd)
@@ -52,8 +94,11 @@ public class GameFlowController : MonoBehaviour
         {
             enemy.gameObject.SetActive(false);
         }
-        
-        _collectibleKey.gameObject.SetActive(true);
+
+        foreach (var key in _collectibleKeys)
+        {
+            key.gameObject.SetActive(true);
+        }
 
         foreach (var timeLocation in _timeLocations)
         {
@@ -64,7 +109,6 @@ public class GameFlowController : MonoBehaviour
         }
 
         NightMode = false;
-        Debug.Log("It is now day");
         _countdown.Init(15);
     }
 
@@ -91,7 +135,10 @@ public class GameFlowController : MonoBehaviour
             spawnedEnemyHere[currentFarthestIndex] = true;
         }
         
-        _collectibleKey.gameObject.SetActive(false);
+        foreach (var key in _collectibleKeys)
+        {
+            key.gameObject.SetActive(false);
+        }
 
         foreach (var collectibleTime in _collectibleTimes)
         {
@@ -99,7 +146,6 @@ public class GameFlowController : MonoBehaviour
         }
         
         NightMode = true;
-        Debug.Log("It is now night");
         _countdown.Init(15);
     }
 
@@ -110,7 +156,7 @@ public class GameFlowController : MonoBehaviour
         else SwitchToDay(); //ew
     }
 
-    public void IterateKey()
+    public void IterateKey(GameObject key)
     {
         if (KeyProgress == TotalKeyCount - 1)
         {
@@ -120,12 +166,13 @@ public class GameFlowController : MonoBehaviour
         else
         {
             KeyProgress++;
-            _collectibleKey.transform.position = _keyLocations[KeyProgress];
+            _collectibleKeys.Remove(key);
+            Destroy(key);
         }
     }
 
-    public float GetProximityVolumeForKey()
+    public float GetProximityVolumeForKey(Vector3 keyPos)
     {
-        return 1f - (Vector3.Distance(_player.position, _collectibleKey.transform.position) / MaxDistance);
+        return 1f - (Vector3.Distance(_player.position, keyPos) / MaxDistance);
     }
 }

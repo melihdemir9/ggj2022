@@ -48,21 +48,12 @@ MonoBehaviour:
   - {fileID: 0}
   _collectibleKeyPrefab: {fileID: 5682807420222651572, guid: 94fe8848fe57eb84c94a1025d77cb26e, type: 3}
   _collectibleTimePrefab: {fileID: 6755464683455498984, guid: 413c5b4f234d1fc419f2bb2d4c687772, type: 3}
-  _enemyLocations:
-  - {x: 25.19, y: 1.08, z: 7.51}
-  _keyLocations:
-  - {x: -1.1969962, y: 2.2960002, z: 2.3026323}
-  - {x: -1.1969962, y: 2.2960002, z: 5.08}
-  - {x: -1.1969962, y: 2.2960002, z: 9.03}
-  - {x: -1.1969962, y: 2.2960002, z: 5.35}
-  - {x: -1.1969962, y: 2.2960002, z: 18.01}
-  _timeLocations: []
   _collectibleParent: {fileID: 0}
   _player: {fileID: 0}
+  TotalKeyCount: 4
   canvas: {fileID: 0}
   gameOverScreen: {fileID: 27827655411344954, guid: 439a0e265dd021141a86d42fa4a5485b, type: 3}
   KeyProgress: 0
-  TotalKeyCount: 0
   NightMode: 0
   MaxDistance: 35
   IsReady: 0
