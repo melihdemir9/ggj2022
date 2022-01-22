@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="440014fd-0abb-458f-b09e-9be871abee9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Materials/FloorTest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/FloorTest.mat" afterDir="false" />
@@ -40,12 +43,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/GameOverScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/KeyMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2419ISXAKUFEHN8ihEoIstNBcRW" />

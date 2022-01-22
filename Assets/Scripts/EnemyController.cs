@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform canvas;
     [SerializeField] private GameObject gameOverScreen;
-    [SerializeField] [Range(5, 20)] private int maxSpeed = 10;
+    [SerializeField] [Range(20, 100)] private int maxSpeed = 25;
     
     private NavMeshAgent _agent;
     private AudioSource _as;

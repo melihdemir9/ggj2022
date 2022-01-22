@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43732256, g: 0.48510015, b: 0.5653702, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7990,7 +7990,7 @@ PrefabInstance:
       objectReference: {fileID: 543450652631782874}
     - target: {fileID: 6274959611458623207, guid: 58eee87cce642aa468f95b874deb08b9, type: 3}
       propertyPath: maxSpeed
-      value: 15
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 6274959611458623207, guid: 58eee87cce642aa468f95b874deb08b9, type: 3}
       propertyPath: gameOverScreen
@@ -13157,7 +13157,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732816065}
-  m_LocalRotation: {x: -0.006110894, y: 0.9906936, z: -0.047519922, w: -0.1273997}
+  m_LocalRotation: {x: -0.0061108894, y: 0.9906936, z: -0.047519885, w: -0.1273997}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -21284,14 +21284,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.2264151, g: 0.22299752, b: 0.22299752, a: 1}
+  m_Color: {r: 0.9433962, g: 0.38625845, b: 0.38625845, a: 1}
   m_Intensity: 2.3
   m_Range: 95
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -21342,13 +21342,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122896477}
-  m_LocalRotation: {x: 0.75983894, y: 0, z: 0, w: 0.6501114}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 72.5, y: 24.2, z: -71.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 98.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1123597587
 PrefabInstance:
   m_ObjectHideFlags: 0

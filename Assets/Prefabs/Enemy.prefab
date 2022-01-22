@@ -102,7 +102,7 @@ MonoBehaviour:
   player: {fileID: 0}
   canvas: {fileID: 0}
   gameOverScreen: {fileID: 27827655411344954, guid: 439a0e265dd021141a86d42fa4a5485b, type: 3}
-  maxSpeed: 15
+  maxSpeed: 20
 --- !u!82 &2370144489815993812
 AudioSource:
   m_ObjectHideFlags: 0

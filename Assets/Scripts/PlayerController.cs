@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float Speed = 8;
 
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private Animator _animator;
     
     // Start is called before the first frame update
     void Start()
@@ -33,11 +34,13 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = new Vector3((vertical * sinrot + horizontal * cosrot) * Speed, 0, (vertical * cosrot - horizontal * sinrot) * Speed);
         if (Mathf.Abs(horizontal) + Mathf.Abs(vertical) > 0.01f)
         {
+            _animator.Play("Walking");
             _footsteps.volume = Mathf.Clamp01(Mathf.Abs(horizontal) + Mathf.Abs(vertical));
             transform.rotation = Quaternion.LookRotation(_rb.velocity);
         }
         else
         {
+            _animator.Play("Idle");
             _footsteps.volume = 0;
         }
 
