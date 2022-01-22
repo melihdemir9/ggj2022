@@ -29,11 +29,6 @@ public class GameFlowController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }
-    
-    void Start()
-    {
-        AudioManager.Instance.LoopSound("dayAmbience");
         TotalKeyCount = _keyLocations.Count;
         //starts as day
         NightMode = false;
@@ -49,6 +44,9 @@ public class GameFlowController : MonoBehaviour
 
     private void SwitchToDay()
     {
+        AudioManager.Instance.StopLoop();
+        AudioManager.Instance.LoopSound("dayAmbience");
+        
         foreach (var enemy in _enemies)
         {
             enemy.gameObject.SetActive(false);
@@ -71,6 +69,9 @@ public class GameFlowController : MonoBehaviour
 
     private void SwitchToNight()
     {
+        AudioManager.Instance.StopLoop();
+        AudioManager.Instance.LoopSound("nightAmbience");
+        
         bool[] spawnedEnemyHere = new bool[_enemyLocations.Count];
         foreach (var enemy in _enemies)
         {

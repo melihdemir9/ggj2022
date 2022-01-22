@@ -547,6 +547,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 21207575270210217, guid: 58eee87cce642aa468f95b874deb08b9, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21207575270210217, guid: 58eee87cce642aa468f95b874deb08b9, type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5872100814416969245, guid: 58eee87cce642aa468f95b874deb08b9, type: 3}
       propertyPath: m_RootOrder
       value: 10

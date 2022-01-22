@@ -12,18 +12,16 @@ public class EnemyController : MonoBehaviour
     [SerializeField] [Range(5, 20)] private int maxSpeed = 10;
     
     private NavMeshAgent _agent;
-    // Start is called before the first frame update
-    IEnumerator Start()
+    
+    private void OnEnable()
     {
         _agent = GetComponent<NavMeshAgent>();
-
-        yield return new WaitUntil(() => GameFlowController.Instance.IsReady);
+        _agent.speed = maxSpeed * ((GameFlowController.Instance.KeyProgress + 1f) / (GameFlowController.Instance.TotalKeyCount + 1f));
     }
 
     // Update is called once per frame
     void Update()
     {
-        _agent.speed = maxSpeed * (GameFlowController.Instance.KeyProgress / GameFlowController.Instance.TotalKeyCount);
         _agent.SetDestination(player.position);
     }
 
