@@ -49,7 +49,7 @@ public class GameFlowController : MonoBehaviour
         foreach (var enemyMarker in markers)
         {
             _enemyLocations.Add(enemyMarker.transform.position);
-            Destroy(enemyMarker);
+            Destroy(enemyMarker.gameObject);
         }
     }
 
@@ -59,7 +59,7 @@ public class GameFlowController : MonoBehaviour
         foreach (var keyMarker in markers)
         {
             _possibleKeyLocations.Add(keyMarker.transform.position);
-            Destroy(keyMarker);
+            Destroy(keyMarker.gameObject);
         }
 
         for (int i = 0; i < TotalKeyCount; ++i)
@@ -76,7 +76,7 @@ public class GameFlowController : MonoBehaviour
         foreach (var timeMarker in markers)
         {
             _timeLocations.Add(timeMarker.transform.position);
-            Destroy(timeMarker);
+            Destroy(timeMarker.gameObject);
         }
     }
 
