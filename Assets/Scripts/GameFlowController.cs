@@ -13,9 +13,14 @@ public class GameFlowController : MonoBehaviour
     [SerializeField] private List<Vector3> _timeLocations;
     [SerializeField] private Transform _collectibleParent;
     [SerializeField] private Transform _player;
+    
+    //temp
+    [SerializeField] private Transform canvas;
+    [SerializeField] private GameObject gameOverScreen;
 
     [HideInInspector] public int KeyProgress = 0;
-    private bool NightMode;
+    [HideInInspector] public int TotalKeyCount;
+    [HideInInspector] public bool NightMode;
     private List<GameObject> _collectibleTimes = new List<GameObject>();
     private GameObject _collectibleKey;
     
@@ -27,6 +32,7 @@ public class GameFlowController : MonoBehaviour
     
     void Start()
     {
+        TotalKeyCount = _keyLocations.Count;
         //starts as day
         NightMode = false;
         _collectibleKey = Instantiate(_collectibleKeyPrefab, _keyLocations[KeyProgress], Quaternion.identity, _collectibleParent);
@@ -97,5 +103,19 @@ public class GameFlowController : MonoBehaviour
         NightMode = !NightMode; //ew
         if(NightMode) SwitchToNight(); //ew
         else SwitchToDay(); //ew
+    }
+
+    public void IterateKey()
+    {
+        if (KeyProgress == TotalKeyCount - 1)
+        {
+            //temp
+            Instantiate(gameOverScreen, canvas);
+        }
+        else
+        {
+            KeyProgress++;
+            _collectibleKey.transform.position = _keyLocations[KeyProgress];
+        }
     }
 }

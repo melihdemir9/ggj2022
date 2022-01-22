@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4939036014171415818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4939036014171415820}
+  - component: {fileID: 4939036014171415819}
+  m_Layer: 0
+  m_Name: GameFlowController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4939036014171415820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939036014171415818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1720.4122, y: 109.17326, z: 2.4947548}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4939036014171415819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939036014171415818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6714261f398df934cadd71dcc29cbc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _countdown: {fileID: 0}
+  _enemies:
+  - {fileID: 0}
+  _collectibleKeyPrefab: {fileID: 5682807420222651572, guid: 94fe8848fe57eb84c94a1025d77cb26e, type: 3}
+  _collectibleTimePrefab: {fileID: 6755464683455498984, guid: 413c5b4f234d1fc419f2bb2d4c687772, type: 3}
+  _enemyLocations:
+  - {x: 25.19, y: 1.08, z: 7.51}
+  _keyLocations:
+  - {x: -1.1969962, y: 2.2960002, z: 2.3026323}
+  _timeLocations: []
+  _collectibleParent: {fileID: 0}
+  _player: {fileID: 0}
+  canvas: {fileID: 0}
+  gameOverScreen: {fileID: 27827655411344954, guid: 439a0e265dd021141a86d42fa4a5485b, type: 3}
+  KeyProgress: 0
+  TotalKeyCount: 0
+  NightMode: 0

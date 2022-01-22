@@ -10,8 +10,7 @@ public class CollectibleKey : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Key collect");
-            Destroy(gameObject);
+            GameFlowController.Instance.IterateKey();
         }
     }
 }
