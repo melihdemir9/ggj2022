@@ -35,20 +35,20 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCountdown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" />
       <option value="$PROJECT_DIR$/Assets/GameOverScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/StartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/New Folder/GameOverScreen.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/KeyMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2419ISXAKUFEHN8ihEoIstNBcRW" />
@@ -133,13 +133,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs</url>
-          <line>174</line>
+          <line>182</line>
           <properties documentPath="C:\Bitbucket\ggj2022\Assets\Scripts\GameFlowController.cs" initialLine="127" containingFunctionPresentation="method 'GetProximityVolumeForKey'">
             <startOffsets>
-              <option value="5232" />
+              <option value="5544" />
             </startOffsets>
             <endOffsets>
-              <option value="5233" />
+              <option value="5545" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
