@@ -19,14 +19,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleCountdown.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCountdown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleTime.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2419ISXAKUFEHN8ihEoIstNBcRW" />
@@ -71,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642787149527</updated>
-      <workItem from="1642787157378" duration="11062000" />
+      <workItem from="1642787157378" duration="11752000" />
     </task>
     <servers />
   </component>

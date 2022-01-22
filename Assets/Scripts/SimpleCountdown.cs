@@ -36,4 +36,9 @@ public class SimpleCountdown : MonoBehaviour
             }
         }
     }
+
+    public void AddTime(int timeToAdd)
+    {
+        _timeLeft += timeToAdd;
+    }
 }
