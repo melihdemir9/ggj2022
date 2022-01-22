@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: dce1431c4cf82d8408970dd1fa15be52
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 1684714624286208949
+    second: Garu_Idle/Attack
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 7061f2708ebfa3d43ab05c86d72ab6f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye Shade
+    second: {fileID: 2100000, guid: fbf896b516b4d804f95d99d0f0c2ec98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shade
+    second: {fileID: 2100000, guid: 57c98b3d3eaa3c04cb64fe5eb2fd331a, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Garu_Idle/Attack
+      takeName: Garu_rig|Idle/Attack_unity
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Garu(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Garu
+      parentName: Garu(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000021656288, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Garu_rig
+      parentName: Garu(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000009735359, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine
+      parentName: Garu_rig
+      position: {x: -5.685501e-14, y: 2.8164907, z: 0.08960042}
+      rotation: {x: -0.40795776, y: 0.000000108838194, z: -0.00000004863236, w: 0.9130008}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: spine.001
+      parentName: spine
+      position: {x: -4.0481805e-14, y: 1.69568, z: 0.00000017881393}
+      rotation: {x: 0.41285613, y: -0.00000021715073, z: 2.4868996e-14, w: 0.9107963}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: spine.002
+      parentName: spine.001
+      position: {x: -4.2861297e-14, y: 1.6222783, z: 0.00000051781535}
+      rotation: {x: 0.20360902, y: 0.0000003501363, z: 0.000000024272087, w: 0.97905225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine.003
+      parentName: spine.002
+      position: {x: 1.6886813e-12, y: 1.2309773, z: -0.000000059604645}
+      rotation: {x: 0.025363233, y: 0.00000059585443, z: 0.000000027211211, w: 0.9996783}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: spine.004
+      parentName: spine.003
+      position: {x: -2.2098486e-12, y: 1.1517553, z: -0.00000022351742}
+      rotation: {x: -0.29257998, y: -0.0000023936313, z: 0.00000024407922, w: 0.956241}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine.005
+      parentName: spine.004
+      position: {x: -1.813004e-12, y: 0.20623559, z: -0.00000015832484}
+      rotation: {x: -0.025557712, y: -0.00004519738, z: 0.0000012408173, w: 0.9996734}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: spine.006
+      parentName: spine.005
+      position: {x: -9.7781054e-11, y: 0.3263275, z: 0.00000048428774}
+      rotation: {x: -0.5457678, y: 0.00003918327, z: 0.000025651108, w: 0.83793646}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: shoulder.L.001
+      parentName: spine.003
+      position: {x: -0.54310364, y: 0.89532197, z: 0.3764862}
+      rotation: {x: -0.8014288, y: 0.54852813, z: 0.14543833, w: 0.18888228}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.9999997}
+    - name: upper_arm.L
+      parentName: shoulder.L.001
+      position: {x: -0.1088448, y: 2.112155, z: -0.04402882}
+      rotation: {x: 0.11761743, y: -0.7332848, z: 0.12303817, w: 0.6582714}
+      scale: {x: 1.0000001, y: 1, z: 0.99999976}
+    - name: forearm.L
+      parentName: upper_arm.L
+      position: {x: 0.000000014901161, y: 2.0812078, z: -0.00000029802322}
+      rotation: {x: 0.02398912, y: 0.017222252, z: -0.026021698, w: 0.99922514}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999997}
+    - name: hand.L
+      parentName: forearm.L
+      position: {x: 0.0000002849847, y: 2.7710407, z: -0.00000008940697}
+      rotation: {x: 0.026182199, y: -0.0029301248, z: 0.1111811, w: 0.99345094}
+      scale: {x: 1, y: 1.0000004, z: 1.0000002}
+    - name: shoulder.R.001
+      parentName: spine.003
+      position: {x: 0.54310244, y: 0.8953223, z: 0.3764875}
+      rotation: {x: -0.8014286, y: -0.5485284, z: -0.14543949, w: 0.18888141}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: upper_arm.R
+      parentName: shoulder.R.001
+      position: {x: 0.10884498, y: 2.112156, z: -0.0440299}
+      rotation: {x: -0.11761731, y: -0.7332849, z: 0.12303814, w: -0.65827125}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: forearm.R
+      parentName: upper_arm.R
+      position: {x: 0.0000006556511, y: 2.0812073, z: 0}
+      rotation: {x: 0.023989227, y: -0.017222403, z: 0.02602188, w: 0.99922514}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.99999976}
+    - name: hand.R
+      parentName: forearm.R
+      position: {x: 0.00000051036477, y: 2.7710407, z: -0.0000003874302}
+      rotation: {x: 0.02618229, y: 0.0029302405, z: -0.111180894, w: 0.99345094}
+      scale: {x: 0.9999997, y: 0.99999964, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
