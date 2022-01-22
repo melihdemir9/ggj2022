@@ -55,12 +55,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 76ac409e4f0b7534ca93376ef93df674, type: 3}
+        m_Scale: {x: 1.81, y: -0.4}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DownOpacity: -60
-    - _DownSharpness: 3.16
+    - _DownOpacity: -99
+    - _DownSharpness: 4.1
     - _DstBlend: 0
     - _Float0: 4.26
     - _Float1: -94
@@ -77,10 +81,15 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UpOpacity: -98
-    - _UpSharpness: 2.59
+    - _UpOpacity: -100
+    - _UpSharpness: 2.3
     - _ZWrite: 1
+    - _wavepower: 6.84
+    - _wavespeed: 0.43
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color0: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadeColor: {r: 0.5188679, g: 0.12922746, b: 0.1533026, a: 0}
+    - _WaveColor: {r: 0.9254902, g: 0.09803919, b: 0.21853447, a: 0}
   m_BuildTextureStacks: []

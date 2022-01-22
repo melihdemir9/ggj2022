@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Eye Shade
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: b64293958bbdbfd41b7d7b65a53c99ef, type: 3}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,10 +55,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture1:
+        m_Texture: {fileID: 2800000, guid: 76ac409e4f0b7534ca93376ef93df674, type: 3}
+        m_Scale: {x: 2.4, y: -1.04}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DownOpacity: -38
+    - _DownSharpness: 1.38
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0
@@ -72,7 +78,11 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _wavepower1: 9.1
+    - _wavespeed1: 2.45
     m_Colors:
     - _Color: {r: 0.9063317, g: 0.2803016, b: 0.22004944, a: 1}
     - _EmissionColor: {r: 0.64446956, g: 0.00329745, b: 0.00837509, a: 1}
+    - _ShadeColor: {r: 0.6981132, g: 0.12626873, b: 0.10142397, a: 1}
+    - _WaveColor1: {r: 0.5566038, g: 0.065112114, b: 0.08011945, a: 0}
   m_BuildTextureStacks: []
