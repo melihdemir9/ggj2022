@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private Transform player;
+    [SerializeField] private Transform canvas;
+    [SerializeField] private GameObject youDiedScreen;
     
     private NavMeshAgent _agent;
     // Start is called before the first frame update
@@ -18,5 +21,13 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         _agent.SetDestination(player.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Instantiate(youDiedScreen, canvas);
+        }
     }
 }
