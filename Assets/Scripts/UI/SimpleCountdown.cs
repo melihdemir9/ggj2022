@@ -34,6 +34,7 @@ public class SimpleCountdown : MonoBehaviour
             {
                 _timerOn = false;
                 GameFlowController.Instance.Switch();
+                _last3SoundPlayed = false;
             }else if (_timeLeft < 3 && !_last3SoundPlayed)
             {
                 _last3SoundPlayed = true;

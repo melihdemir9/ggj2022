@@ -107,7 +107,7 @@ public class GameFlowController : MonoBehaviour
 
         foreach (var timeLocation in _timeLocations)
         {
-            if (Random.Range(0, 1) > 0.5f)
+            if (Random.Range(0f, 1f) > 0.5f)
             {
                 _collectibleTimes.Add(Instantiate(_collectibleTimePrefab, timeLocation, Quaternion.identity, _collectibleParent));
             }
