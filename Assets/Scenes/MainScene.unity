@@ -13313,7 +13313,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732816065}
-  m_LocalRotation: {x: -0.0061108894, y: 0.9906936, z: -0.047519885, w: -0.1273997}
+  m_LocalRotation: {x: -0.006110894, y: 0.9906936, z: -0.047519922, w: -0.1273997}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17731,7 +17731,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19500193, g: 0.07714489, b: 0.20754719, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -40983,6 +40983,10 @@ PrefabInstance:
       propertyPath: _collectibleParent
       value: 
       objectReference: {fileID: 1896008813}
+    - target: {fileID: 4939036014171415819, guid: 816a2185801b0c545a4035832418a6b9, type: 3}
+      propertyPath: _postProcessVolume
+      value: 
+      objectReference: {fileID: 545464474}
     - target: {fileID: 4939036014171415819, guid: 816a2185801b0c545a4035832418a6b9, type: 3}
       propertyPath: _enemies.Array.size
       value: 3
