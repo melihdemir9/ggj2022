@@ -10,6 +10,7 @@ public class SimpleCountdown : MonoBehaviour
     private TextMeshProUGUI _tmp;
     private float _timeLeft;
     private bool _timerOn;
+    private bool _last3SoundPlayed;
 
     private void Awake()
     {
@@ -33,6 +34,10 @@ public class SimpleCountdown : MonoBehaviour
             {
                 _timerOn = false;
                 GameFlowController.Instance.Switch();
+            }else if (_timeLeft < 3 && !_last3SoundPlayed)
+            {
+                _last3SoundPlayed = true;
+                AudioManager.Instance.PlaySound("last3");
             }
         }
     }
@@ -40,5 +45,8 @@ public class SimpleCountdown : MonoBehaviour
     public void AddTime(int timeToAdd)
     {
         _timeLeft += timeToAdd;
+        if (_timeLeft <= 3) return;
+        AudioManager.Instance.StopSingle();
+        _last3SoundPlayed = false;
     }
 }

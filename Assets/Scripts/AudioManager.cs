@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource _singleSource;
     [SerializeField] private AudioSource _loopSource;
 
-    public bool IsReady = false;
+    public bool IsReady;
     
     private void Awake()
     {
@@ -34,6 +34,11 @@ public class AudioManager : MonoBehaviour
         _singleSource.volume = volume;
         _singleSource.clip = SoundsDictionary[soundName];
         _singleSource.Play();
+    }
+
+    public void StopSingle()
+    {
+        _singleSource.Stop();
     }
 
     public void LoopSound(string soundName, float volume = 1f)
