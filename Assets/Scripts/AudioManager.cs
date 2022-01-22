@@ -29,14 +29,16 @@ public class AudioManager : MonoBehaviour
         IsReady = true;
     }
 
-    public void PlaySound(string soundName)
+    public void PlaySound(string soundName, float volume = 1f)
     {
+        _singleSource.volume = volume;
         _singleSource.clip = SoundsDictionary[soundName];
         _singleSource.Play();
     }
 
-    public void LoopSound(string soundName)
+    public void LoopSound(string soundName, float volume = 1f)
     {
+        _loopSource.volume = volume;
         _loopSource.loop = true;
         _loopSource.clip = SoundsDictionary[soundName];
         _loopSource.Play();

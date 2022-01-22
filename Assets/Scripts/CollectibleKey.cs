@@ -5,6 +5,24 @@ using UnityEngine;
 
 public class CollectibleKey : MonoBehaviour
 {
+    private AudioSource _as;
+
+    private void OnEnable()
+    {
+        _as = GetComponent<AudioSource>();
+        _as.loop = true;
+        _as.Play();
+    }
+
+    private void OnDisable()
+    {
+        _as.Stop();
+    }
+
+    private void Update()
+    {
+        _as.volume = GameFlowController.Instance.GetProximityVolumeForKey();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

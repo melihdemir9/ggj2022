@@ -23,6 +23,7 @@ public class GameFlowController : MonoBehaviour
     [HideInInspector] public bool NightMode;
     private List<GameObject> _collectibleTimes = new List<GameObject>();
     private GameObject _collectibleKey;
+    public float MaxDistance;
 
     public static GameFlowController Instance;
     public bool IsReady = false;
@@ -45,7 +46,7 @@ public class GameFlowController : MonoBehaviour
     private void SwitchToDay()
     {
         AudioManager.Instance.StopLoop();
-        AudioManager.Instance.LoopSound("dayAmbience");
+        AudioManager.Instance.LoopSound("dayAmbience", 0.3f);
         
         foreach (var enemy in _enemies)
         {
@@ -121,5 +122,10 @@ public class GameFlowController : MonoBehaviour
             KeyProgress++;
             _collectibleKey.transform.position = _keyLocations[KeyProgress];
         }
+    }
+
+    public float GetProximityVolumeForKey()
+    {
+        return 1f - (Vector3.Distance(_player.position, _collectibleKey.transform.position) / MaxDistance);
     }
 }
