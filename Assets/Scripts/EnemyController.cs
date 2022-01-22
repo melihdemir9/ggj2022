@@ -12,11 +12,21 @@ public class EnemyController : MonoBehaviour
     [SerializeField] [Range(5, 20)] private int maxSpeed = 10;
     
     private NavMeshAgent _agent;
+    private AudioSource _as;
     
     private void OnEnable()
     {
+        _as = GetComponent<AudioSource>();
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = maxSpeed * ((GameFlowController.Instance.KeyProgress + 1f) / (GameFlowController.Instance.TotalKeyCount + 1f));
+
+        _as.loop = true;
+        _as.Play();
+    }
+
+    private void OnDisable()
+    {
+        _as.Stop();
     }
 
     // Update is called once per frame
