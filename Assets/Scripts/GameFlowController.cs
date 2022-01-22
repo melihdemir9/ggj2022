@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameFlowController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameFlowController : MonoBehaviour
     //temp
     [SerializeField] private Transform canvas;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private Camera _sceneCamera;
+    [SerializeField] private Light _lightSource;
+    [SerializeField] private PostProcessVolume _postProcessVolume;
 
     [HideInInspector] public int KeyProgress = 0;
     [HideInInspector] public bool NightMode;
@@ -90,6 +94,10 @@ public class GameFlowController : MonoBehaviour
         AudioManager.Instance.StopLoop();
         AudioManager.Instance.LoopSound("dayAmbience", 0.3f);
         
+        _sceneCamera.clearFlags = CameraClearFlags.Skybox;
+        _lightSource.intensity = 1.22f;
+        _postProcessVolume.profile.GetSetting<Vignette>().color.value = new Color(0.3176471f, 0.6705883f, 0.8980392f);
+
         foreach (var enemy in _enemies)
         {
             enemy.gameObject.SetActive(false);
@@ -102,7 +110,7 @@ public class GameFlowController : MonoBehaviour
 
         foreach (var timeLocation in _timeLocations)
         {
-            if (Random.Range(0, 1) > 0.5f)
+            if (Random.Range(0f, 1f) > 0.5f)
             {
                 _collectibleTimes.Add(Instantiate(_collectibleTimePrefab, timeLocation, Quaternion.identity, _collectibleParent));
             }
@@ -116,6 +124,11 @@ public class GameFlowController : MonoBehaviour
     {
         AudioManager.Instance.StopLoop();
         AudioManager.Instance.LoopSound("nightAmbience");
+
+        _sceneCamera.clearFlags = CameraClearFlags.SolidColor;
+        _lightSource.intensity = 0.2f;
+        _postProcessVolume.profile.GetSetting<Vignette>().color.value = Color.red;
+
         
         bool[] spawnedEnemyHere = new bool[_enemyLocations.Count];
         foreach (var enemy in _enemies)

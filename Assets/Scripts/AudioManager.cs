@@ -18,7 +18,8 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        Instance = this;
+        if(Instance != null) Destroy(gameObject);
+        else Instance = this;
 
         SoundsDictionary = new Dictionary<string, AudioClip>();
         for (int i = 0; i < SoundNames.Count; ++i)
