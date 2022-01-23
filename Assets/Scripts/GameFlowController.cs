@@ -49,6 +49,7 @@ public class GameFlowController : MonoBehaviour
         SwitchToDay();
         
         IsReady = true;
+        Cursor.visible = false;
     }
 
     private void ProcessEnemyMarkers()

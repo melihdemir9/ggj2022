@@ -44,7 +44,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/KeyMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMarker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
       <option value="$PROJECT_DIR$/Assets/KeyCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu.cs" />
@@ -52,6 +51,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameOverScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2419ISXAKUFEHN8ihEoIstNBcRW" />
@@ -69,6 +70,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/output/v0.2\Keep Your Eyes Open.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Bitbucket\ggj2022\output\v0.2" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -123,13 +132,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs</url>
-          <line>118</line>
+          <line>119</line>
           <properties documentPath="C:\Bitbucket\ggj2022\Assets\Scripts\GameFlowController.cs" initialLine="114" containingFunctionPresentation="method 'SwitchToDay'">
             <startOffsets>
-              <option value="3824" />
+              <option value="3856" />
             </startOffsets>
             <endOffsets>
-              <option value="3938" />
+              <option value="3970" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

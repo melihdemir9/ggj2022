@@ -6,6 +6,7 @@ public class GameOverScreen : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        Cursor.visible = true;
         Time.timeScale = 0;
     }
 
