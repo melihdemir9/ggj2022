@@ -28,6 +28,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,12 +44,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/TimeMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/KeyMarker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMarker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
+      <option value="$PROJECT_DIR$/Assets/KeyCounter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SimpleCountdown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2419ISXAKUFEHN8ihEoIstNBcRW" />
@@ -120,13 +123,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs</url>
-          <line>115</line>
+          <line>118</line>
           <properties documentPath="C:\Bitbucket\ggj2022\Assets\Scripts\GameFlowController.cs" initialLine="114" containingFunctionPresentation="method 'SwitchToDay'">
             <startOffsets>
-              <option value="3730" />
+              <option value="3824" />
             </startOffsets>
             <endOffsets>
-              <option value="3844" />
+              <option value="3938" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

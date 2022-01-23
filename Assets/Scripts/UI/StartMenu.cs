@@ -46,6 +46,7 @@ public class StartMenu : MonoBehaviour
         _musicOn = !_musicOn;
         _musicButton.image.sprite = _musicOn ? _musicOnImage : _musicOffImage;
         PlayerPrefs.SetInt("musicOn", _musicOn ? 1 : 0);
+        AudioManager.Instance.LoopSound("nightAmbience");
     }
     
     private void OnStartButtonClicked()

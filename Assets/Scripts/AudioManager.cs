@@ -44,10 +44,17 @@ public class AudioManager : MonoBehaviour
 
     public void LoopSound(string soundName, float volume = 1f)
     {
-        _loopSource.volume = volume;
-        _loopSource.loop = true;
-        _loopSource.clip = SoundsDictionary[soundName];
-        _loopSource.Play();
+        if (PlayerPrefs.GetInt("musicOn", 1) == 1)
+        {
+            _loopSource.volume = volume;
+            _loopSource.loop = true;
+            _loopSource.clip = SoundsDictionary[soundName];
+            _loopSource.Play();
+        }
+        else
+        {
+            _loopSource.Stop();
+        }
     }
 
     public void StopLoop()

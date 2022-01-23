@@ -19,8 +19,12 @@ public class PlayerController : MonoBehaviour
         _footsteps = GetComponent<AudioSource>();
 
         _footsteps.volume = 0;
-        _footsteps.loop = true;
-        _footsteps.Play();
+
+        if (PlayerPrefs.GetInt("sfxOn", 1) == 1)
+        {
+            _footsteps.loop = true;
+            _footsteps.Play();
+        }
     }
 
     // Update is called once per frame
