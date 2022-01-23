@@ -7,6 +7,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class GameFlowController : MonoBehaviour
 {
     [SerializeField] private SimpleCountdown _countdown;
+    [SerializeField] private KeyCounter _keyCounter;
     [SerializeField] private List<EnemyController> _enemies;
     [SerializeField] private GameObject _collectibleKeyPrefab;
     [SerializeField] private GameObject _collectibleTimePrefab;
@@ -133,6 +134,7 @@ public class GameFlowController : MonoBehaviour
         int enemyIndex = 0;
         foreach (var enemyLocation in _enemyLocations.OrderBy(loc => Vector3.Distance(loc, _player.position)))
         {
+            //Debug.Log("enemyIndex: " + enemyIndex + ", enemyLocation: " + enemyLocation.x + ", " + enemyLocation.y + ", " + enemyLocation.z);
             if (enemyIndex >= _enemies.Count)
             {
                 _enemies[0].transform.position = enemyLocation;
@@ -175,6 +177,7 @@ public class GameFlowController : MonoBehaviour
         else
         {
             KeyProgress++;
+            _keyCounter.UpdateCounter(KeyProgress, TotalKeyCount);
             _collectibleKeys.Remove(key);
             Destroy(key);
         }
