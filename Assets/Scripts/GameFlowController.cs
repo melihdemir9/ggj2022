@@ -21,6 +21,7 @@ public class GameFlowController : MonoBehaviour
     [SerializeField] private Camera _sceneCamera;
     [SerializeField] private Light _lightSource;
     [SerializeField] private PostProcessVolume _postProcessVolume;
+    [SerializeField] private MainSceneTutorialHelper _mainSceneTutorialHelper;
 
     [HideInInspector] public int KeyProgress = 0;
     [HideInInspector] public bool NightMode;
@@ -44,6 +45,11 @@ public class GameFlowController : MonoBehaviour
 
         _keyCounter.Init(TotalKeyCount);
         
+        _mainSceneTutorialHelper.ShowTutorial(StartGame);
+    }
+
+    private void StartGame()
+    {
         //starts as day
         NightMode = false;
         SwitchToDay();
@@ -51,7 +57,7 @@ public class GameFlowController : MonoBehaviour
         IsReady = true;
         Cursor.visible = false;
     }
-
+    
     private void ProcessEnemyMarkers()
     {
         EnemyMarker[] markers = FindObjectsOfType<EnemyMarker>();
