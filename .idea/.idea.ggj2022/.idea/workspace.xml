@@ -49,9 +49,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CollectibleKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameOverScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainSceneTutorialHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs" />
     </changedPaths>
   </component>
@@ -132,13 +133,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameFlowController.cs</url>
-          <line>119</line>
+          <line>126</line>
           <properties documentPath="C:\Bitbucket\ggj2022\Assets\Scripts\GameFlowController.cs" initialLine="114" containingFunctionPresentation="method 'SwitchToDay'">
             <startOffsets>
-              <option value="3856" />
+              <option value="4114" />
             </startOffsets>
             <endOffsets>
-              <option value="3970" />
+              <option value="4228" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

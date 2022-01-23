@@ -129,7 +129,7 @@ public class GameFlowController : MonoBehaviour
         }
 
         NightMode = false;
-        _countdown.Init(15);
+        _countdown.Init(16);
     }
 
     private void SwitchToNight()
