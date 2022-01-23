@@ -17,7 +17,7 @@ public class GameFlowController : MonoBehaviour
 
     //temp
     [SerializeField] private Transform canvas;
-    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject gameWonScreen;
     [SerializeField] private Camera _sceneCamera;
     [SerializeField] private Light _lightSource;
     [SerializeField] private PostProcessVolume _postProcessVolume;
@@ -41,6 +41,8 @@ public class GameFlowController : MonoBehaviour
         ProcessEnemyMarkers();
         ProcessKeyMarkers();
         ProcessTimeMarkers();
+
+        _keyCounter.Init(TotalKeyCount);
         
         //starts as day
         NightMode = false;
@@ -171,8 +173,7 @@ public class GameFlowController : MonoBehaviour
     {
         if (KeyProgress == TotalKeyCount - 1)
         {
-            //temp
-            Instantiate(gameOverScreen, canvas);
+            Instantiate(gameWonScreen, canvas);
         }
         else
         {

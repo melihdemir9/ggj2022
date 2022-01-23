@@ -29744,6 +29744,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 4939036014171415819, guid: 816a2185801b0c545a4035832418a6b9, type: 3}
+      propertyPath: gameWonScreen
+      value: 
+      objectReference: {fileID: 27827655411344954, guid: d5ca0edaed06f2e4ca529564d78cce57, type: 3}
+    - target: {fileID: 4939036014171415819, guid: 816a2185801b0c545a4035832418a6b9, type: 3}
       propertyPath: _collectibleParent
       value: 
       objectReference: {fileID: 1896008813}
