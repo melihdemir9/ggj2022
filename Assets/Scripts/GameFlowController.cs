@@ -108,6 +108,7 @@ public class GameFlowController : MonoBehaviour
         _sceneCamera.clearFlags = CameraClearFlags.Skybox;
         _lightSource.intensity = 1.22f;
         _postProcessVolume.profile.GetSetting<Vignette>().color.value = new Color(0.3176471f, 0.6705883f, 0.8980392f);
+        _player.gameObject.GetComponent<PlayerController>().ToggleLight();
 
         foreach (var enemy in _enemies)
         {
@@ -137,8 +138,9 @@ public class GameFlowController : MonoBehaviour
         AudioManager.Instance.LoopSound("nightAmbience");
 
         _sceneCamera.clearFlags = CameraClearFlags.SolidColor;
-        _lightSource.intensity = 0.2f;
+        _lightSource.intensity = 0.4f;
         _postProcessVolume.profile.GetSetting<Vignette>().color.value = Color.red;
+        _player.gameObject.GetComponent<PlayerController>().ToggleLight();
 
         int enemyIndex = 0;
         foreach (var enemyLocation in _enemyLocations.OrderBy(loc => Vector3.Distance(loc, _player.position)))

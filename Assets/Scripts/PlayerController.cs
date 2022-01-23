@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Animator _animator;
+    [SerializeField] private GameObject _light;
     
     // Start is called before the first frame update
     void Start()
@@ -50,5 +51,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.KeypadPlus)) Speed++;
         if (Input.GetKeyDown(KeyCode.KeypadMinus)) Speed--;
+    }
+
+    public void ToggleLight()
+    {
+        _light.SetActive(!_light.activeInHierarchy);
     }
 }
