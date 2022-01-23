@@ -136,9 +136,10 @@ public class GameFlowController : MonoBehaviour
         int enemyIndex = 0;
         foreach (var enemyLocation in _enemyLocations.OrderBy(loc => Vector3.Distance(loc, _player.position)))
         {
-            //Debug.Log("enemyIndex: " + enemyIndex + ", enemyLocation: " + enemyLocation.x + ", " + enemyLocation.y + ", " + enemyLocation.z);
+            Debug.Log("enemyIndex: " + enemyIndex + ", enemyLocation: " + enemyLocation.x + ", " + enemyLocation.y + ", " + enemyLocation.z);
             if (enemyIndex >= _enemies.Count)
             {
+                _enemies[0].gameObject.SetActive(false);
                 _enemies[0].transform.position = enemyLocation;
                 _enemies[0].gameObject.SetActive(true);
                 break;
