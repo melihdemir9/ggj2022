@@ -21,6 +21,7 @@ public class GameFlowController : MonoBehaviour
     [SerializeField] private Camera _sceneCamera;
     [SerializeField] private Light _lightSource;
     [SerializeField] private PostProcessVolume _postProcessVolume;
+    [SerializeField] private MainSceneTutorialHelper _mainSceneTutorialHelper;
 
     [HideInInspector] public int KeyProgress = 0;
     [HideInInspector] public bool NightMode;
@@ -44,6 +45,11 @@ public class GameFlowController : MonoBehaviour
 
         _keyCounter.Init(TotalKeyCount);
         
+        _mainSceneTutorialHelper.ShowTutorial(StartGame);
+    }
+
+    private void StartGame()
+    {
         //starts as day
         NightMode = false;
         SwitchToDay();
@@ -51,7 +57,7 @@ public class GameFlowController : MonoBehaviour
         IsReady = true;
         Cursor.visible = false;
     }
-
+    
     private void ProcessEnemyMarkers()
     {
         EnemyMarker[] markers = FindObjectsOfType<EnemyMarker>();
@@ -102,6 +108,7 @@ public class GameFlowController : MonoBehaviour
         _sceneCamera.clearFlags = CameraClearFlags.Skybox;
         _lightSource.intensity = 1.22f;
         _postProcessVolume.profile.GetSetting<Vignette>().color.value = new Color(0.3176471f, 0.6705883f, 0.8980392f);
+        _player.gameObject.GetComponent<PlayerController>().ToggleLight();
 
         foreach (var enemy in _enemies)
         {
@@ -122,7 +129,7 @@ public class GameFlowController : MonoBehaviour
         }
 
         NightMode = false;
-        _countdown.Init(15);
+        _countdown.Init(16);
     }
 
     private void SwitchToNight()
@@ -131,8 +138,9 @@ public class GameFlowController : MonoBehaviour
         AudioManager.Instance.LoopSound("nightAmbience");
 
         _sceneCamera.clearFlags = CameraClearFlags.SolidColor;
-        _lightSource.intensity = 0.2f;
+        _lightSource.intensity = 0.4f;
         _postProcessVolume.profile.GetSetting<Vignette>().color.value = Color.red;
+        _player.gameObject.GetComponent<PlayerController>().ToggleLight();
 
         int enemyIndex = 0;
         foreach (var enemyLocation in _enemyLocations.OrderBy(loc => Vector3.Distance(loc, _player.position)))
