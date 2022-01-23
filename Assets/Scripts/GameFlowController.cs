@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameFlowController : MonoBehaviour
 {
     [SerializeField] private SimpleCountdown _countdown;
+    [SerializeField] private KeyCounter _keyCounter;
     [SerializeField] private List<EnemyController> _enemies;
     [SerializeField] private GameObject _collectibleKeyPrefab;
     [SerializeField] private GameObject _collectibleTimePrefab;
@@ -15,7 +17,7 @@ public class GameFlowController : MonoBehaviour
 
     //temp
     [SerializeField] private Transform canvas;
-    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject gameWonScreen;
     [SerializeField] private Camera _sceneCamera;
     [SerializeField] private Light _lightSource;
     [SerializeField] private PostProcessVolume _postProcessVolume;
@@ -39,6 +41,8 @@ public class GameFlowController : MonoBehaviour
         ProcessEnemyMarkers();
         ProcessKeyMarkers();
         ProcessTimeMarkers();
+
+        _keyCounter.Init(TotalKeyCount);
         
         //starts as day
         NightMode = false;
@@ -129,23 +133,19 @@ public class GameFlowController : MonoBehaviour
         _lightSource.intensity = 0.2f;
         _postProcessVolume.profile.GetSetting<Vignette>().color.value = Color.red;
 
-        
-        bool[] spawnedEnemyHere = new bool[_enemyLocations.Count];
-        foreach (var enemy in _enemies)
+        int enemyIndex = 0;
+        foreach (var enemyLocation in _enemyLocations.OrderBy(loc => Vector3.Distance(loc, _player.position)))
         {
-            int currentFarthestIndex = 0;
-            float currentLongestDistance = 0f;
-            for (int i = 0; i < _enemyLocations.Count; ++i)
+            //Debug.Log("enemyIndex: " + enemyIndex + ", enemyLocation: " + enemyLocation.x + ", " + enemyLocation.y + ", " + enemyLocation.z);
+            if (enemyIndex >= _enemies.Count)
             {
-                if (currentLongestDistance >= Vector3.Distance(_player.position, _enemyLocations[i]) ||
-                    spawnedEnemyHere[i]) continue;
-                currentFarthestIndex = i;
-                currentLongestDistance = Vector3.Distance(_player.position, _enemyLocations[i]);
+                _enemies[0].transform.position = enemyLocation;
+                _enemies[0].gameObject.SetActive(true);
+                break;
             }
-
-            enemy.transform.position = _enemyLocations[currentFarthestIndex];
-            enemy.gameObject.SetActive(true);
-            spawnedEnemyHere[currentFarthestIndex] = true;
+            _enemies[enemyIndex].transform.position = enemyLocation;
+            _enemies[enemyIndex].gameObject.SetActive(true);
+            enemyIndex++;
         }
         
         foreach (var key in _collectibleKeys)
@@ -173,12 +173,12 @@ public class GameFlowController : MonoBehaviour
     {
         if (KeyProgress == TotalKeyCount - 1)
         {
-            //temp
-            Instantiate(gameOverScreen, canvas);
+            Instantiate(gameWonScreen, canvas);
         }
         else
         {
             KeyProgress++;
+            _keyCounter.UpdateCounter(KeyProgress, TotalKeyCount);
             _collectibleKeys.Remove(key);
             Destroy(key);
         }

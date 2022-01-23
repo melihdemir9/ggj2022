@@ -38,7 +38,7 @@ public class SimpleCountdown : MonoBehaviour
             }else if (_timeLeft < 3 && !_last3SoundPlayed)
             {
                 _last3SoundPlayed = true;
-                AudioManager.Instance.PlaySound("last3");
+                if(PlayerPrefs.GetInt("sfxOn", 1) == 1) AudioManager.Instance.PlaySound("last3");
             }
         }
     }

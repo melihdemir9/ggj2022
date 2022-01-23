@@ -20,8 +20,12 @@ public class EnemyController : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = maxSpeed * ((GameFlowController.Instance.KeyProgress + 1f) / (GameFlowController.Instance.TotalKeyCount + 1f));
 
-        _as.loop = true;
-        _as.Play();
+       
+        if (PlayerPrefs.GetInt("sfxOn", 1) == 1)
+        {
+            _as.loop = true;
+            _as.Play();
+        }
     }
 
     private void OnDisable()

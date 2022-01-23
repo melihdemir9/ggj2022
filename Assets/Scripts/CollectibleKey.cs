@@ -10,8 +10,11 @@ public class CollectibleKey : MonoBehaviour
     private void OnEnable()
     {
         _as = GetComponent<AudioSource>();
-        _as.loop = true;
-        _as.Play();
+        if (PlayerPrefs.GetInt("sfxOn", 1) == 1)
+        {
+            _as.loop = true;
+            _as.Play();
+        }
     }
 
     private void OnDisable()
