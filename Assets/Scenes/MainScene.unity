@@ -11401,7 +11401,7 @@ Transform:
   - {fileID: 1109240574}
   - {fileID: 1551511027}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &717672990
 PrefabInstance:
@@ -25943,7 +25943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f4979ca7fcf7cfa408276924ef9a481c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1fa8b84f920b6f54d9f42739d60c49f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32857,7 +32857,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2016006619948210564, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5858656851016071664, guid: 94e23ad4da7f29343a68e17009bc59ab, type: 3}
       propertyPath: m_RootOrder
